@@ -85,17 +85,59 @@ public class EjerciciosNivel01_2021Test {
 
     }
 
+
+
     /**
-     * Test of main method, of class EjerciciosNivel01_2021.
+     * Test of quitaAcentos method, of class EjerciciosNivel01_2021.
+     * Sólo quita los acentos, no cambia a mayúsculas
      */
     @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        EjerciciosNivel01_2021.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testQuitaAcentos() {
+        System.out.println("quitaAcentos");
+        EjerciciosNivel01_2021 instance = new EjerciciosNivel01_2021();
+
+        assertEquals("pajaro", instance.quitaAcentos("pájaro"));
+        assertEquals("Andale", instance.quitaAcentos("Ándale"));
+        assertEquals("Cigueña", instance.quitaAcentos("Cigüeña"));
+        assertEquals("perro", instance.quitaAcentos("perro"));
+        assertEquals("pajaro", instance.quitaAcentos("pájáró"));
+        assertEquals("pristino", instance.quitaAcentos("prístino"));
+        assertEquals("murcielago", instance.quitaAcentos("murciélago"));
+        assertEquals("atun", instance.quitaAcentos("atún"));
+        assertEquals("camion", instance.quitaAcentos("camión"));   
+        assertEquals("PAJARO", instance.quitaAcentos("PÁJÁRÓ"));
+        assertEquals("PRISTINO", instance.quitaAcentos("PRÍSTINO"));
+        assertEquals("MURCIELAGO", instance.quitaAcentos("MURCIÉLAGO"));
+        assertEquals("ATUN", instance.quitaAcentos("ATÚN"));
+        assertEquals("CAMION", instance.quitaAcentos("CAMIÓN"));      
+
     }
+
+    /**
+     * Test of quitaAcentosV2 method, of class EjerciciosNivel01_2021.
+     */
+    @Test
+    public void testQuitaAcentosV2() {
+        System.out.println("quitaAcentosV2");
+        EjerciciosNivel01_2021 instance = new EjerciciosNivel01_2021();
+
+        assertEquals("pajaro", instance.quitaAcentosV2("pájaro"));
+        assertEquals("Andale", instance.quitaAcentosV2("Ándale"));
+        assertEquals("Cigueña", instance.quitaAcentosV2("Cigüeña"));
+        assertEquals("perro", instance.quitaAcentosV2("perro"));
+        assertEquals("pajaro", instance.quitaAcentosV2("pájáró"));
+        assertEquals("pristino", instance.quitaAcentosV2("prístino"));
+        assertEquals("murcielago", instance.quitaAcentosV2("murciélago"));
+        assertEquals("atun", instance.quitaAcentosV2("atún"));
+        assertEquals("camion", instance.quitaAcentosV2("camión"));   
+        assertEquals("PAJARO", instance.quitaAcentosV2("PÁJÁRÓ"));
+        assertEquals("PRISTINO", instance.quitaAcentosV2("PRÍSTINO"));
+        assertEquals("MURCIELAGO", instance.quitaAcentosV2("MURCIÉLAGO"));
+        assertEquals("ATUN", instance.quitaAcentosV2("ATÚN"));
+        assertEquals("CAMION", instance.quitaAcentosV2("CAMIÓN"));  
+    }
+
+ 
 
 
     
