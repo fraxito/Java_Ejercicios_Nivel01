@@ -30,17 +30,17 @@ public class EjerciciosNivel01_2021Test {
     /**
      * Test of maximo method, of class EjerciciosNivel01_2021.
      */
-    @Test
-    public void testMaximo() {
-        System.out.println("maximo");
-        int[] lista = null;
-        EjerciciosNivel01_2021 instance = new EjerciciosNivel01_2021();
-        int expResult = 0;
-        int result = instance.maximo(lista);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+//    @Test
+//    public void testMaximo() {
+//        System.out.println("maximo");
+//        int[] lista = null;
+//        EjerciciosNivel01_2021 instance = new EjerciciosNivel01_2021();
+//        int expResult = 0;
+//        int result = instance.maximo(lista);
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
 
     /**
      * Test of esPalindromo method, of class EjerciciosNivel01_2021.
