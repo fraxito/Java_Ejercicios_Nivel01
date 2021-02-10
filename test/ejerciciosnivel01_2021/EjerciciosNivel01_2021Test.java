@@ -137,6 +137,56 @@ public class EjerciciosNivel01_2021Test {
         assertEquals("CAMION", instance.quitaAcentosV2("CAMIÓN"));  
     }
 
+//    /**
+//     * Test of maximo method, of class EjerciciosNivel01_2021.
+//     */
+//    @Test
+//    public void testMaximo() {
+//        System.out.println("maximo");
+//        int[] lista = null;
+//        EjerciciosNivel01_2021 instance = new EjerciciosNivel01_2021();
+//        int expResult = 0;
+//        int result = instance.maximo(lista);
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+
+    /**
+     * Test of divideFrase method, of class EjerciciosNivel01_2021.
+     */
+    @Test
+    public void testDivideFrase() {
+        System.out.println("divideFrase");
+        String frase = "";
+        EjerciciosNivel01_2021 instance = new EjerciciosNivel01_2021();
+        String[] expResult = null;
+        String[] result = instance.divideFrase(frase);
+        assertArrayEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of acronimo method, of class EjerciciosNivel01_2021.
+     */
+    @Test
+    public void testAcronimo() {
+        System.out.println("acronimo");
+        EjerciciosNivel01_2021 instance = new EjerciciosNivel01_2021();
+
+        assertEquals("AVE", instance.acronimo("Alta Velocidad Española"));
+        assertEquals("CETS", instance.acronimo("Centro de Estudios Tecnológicos y Sociales"));
+        assertEquals("UFV", instance.acronimo("Universidad Francisco de Vitoria"));
+        assertEquals("OMS", instance.acronimo("organizacion mundial de la salud"));
+        assertEquals("ESO", instance.acronimo("educacion secundaria obligatoria"));
+        assertEquals("ITV", instance.acronimo("Inspección técnica de vehículos"));
+        assertEquals("OTAN", instance.acronimo("organizacion tratado atlántico norte"));
+        assertEquals("ACNUR", instance.acronimo("alto comisionado de las naciones  unidas de refugiado"));
+    }
+
+
+
  
 
 
