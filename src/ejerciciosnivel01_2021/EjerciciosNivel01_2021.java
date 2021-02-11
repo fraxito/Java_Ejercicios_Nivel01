@@ -238,6 +238,23 @@ public class EjerciciosNivel01_2021 {
     }
     
     /**
+     * 
+     * @param diasIniciales son los días con XX que hay que poner al inicio
+     */
+    
+    public void calendario(int diasIniciales){
+        //primera parte: imprimir las XX iniciales
+        for (int i=0; i < diasIniciales; i++){
+            System.out.print("XX ");
+        }
+        
+        //segunda fase: imprimir los números del 1 al 31
+        for (int i=1; i<=31; i++){
+            System.out.print(i + " ");
+        }
+    }
+
+    /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -245,7 +262,6 @@ public class EjerciciosNivel01_2021 {
         System.out.println("palíndromo: " + ejercicio.esPalindromo("Acaso hubo buhos aca"));
         System.out.println("palíndromo: " + ejercicio.esPalindromo("estonoes"));
         System.out.println("el máximo es " + ejercicio.maximo(ejercicio.listaNumeros));
-        
 
         System.out.println("la palabra murcielago " + ejercicio.esIsograma("murcielago"));
         System.out.println("la palabra careta " + ejercicio.esIsograma("careta"));
@@ -257,6 +273,8 @@ public class EjerciciosNivel01_2021 {
         else {
             System.out.println("NO son anagramas");
         }
+        
+        ejercicio.calendario(3);
        
     }
 
