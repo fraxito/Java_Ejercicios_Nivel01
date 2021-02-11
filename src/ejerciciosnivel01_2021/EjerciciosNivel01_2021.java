@@ -202,6 +202,40 @@ public class EjerciciosNivel01_2021 {
         return auxiliar;
     }
     
+    /**
+     * Recibe dos strings y devuelve true si todas las letras del primero están 
+     * en el segundo (sin repetirse), por ejemplo amor y roma
+     * @param palabra1
+     * @param palabra2
+     * @return 
+     */
+    public boolean esAnagrama (String palabra1, String palabra2 ){
+        palabra1 = quitaEspaciosEnBlanco(palabra1);
+        palabra2 = quitaEspaciosEnBlanco(palabra2);
+        palabra1 = quitaAcentos(palabra1); 
+        palabra2 = quitaAcentos(palabra2); 
+        palabra1 = palabra1.toLowerCase(); //para que todas las letras sean minúsculas
+        palabra2 = palabra2.toLowerCase();
+        
+        if (palabra1.length() != palabra2.length()){
+            return false;  //no tienen el mismo número de letras, luego no son anagramas
+        }
+        if (palabra1.length() == 0){
+            return false; //no tiene caracteres
+        }
+
+        for (int i=0; i<palabra1.length(); i++){
+            if (palabra2.contains( "" + palabra1.charAt(i)) ){
+                //busco dónde está la letra y luego hago algo con ella
+                palabra2 = palabra2.replaceFirst("" +palabra1.charAt(i), "#"); 
+            }
+            else{
+                return false;
+            }
+        }
+        
+        return true;
+    }
     
     /**
      * @param args the command line arguments
@@ -217,6 +251,13 @@ public class EjerciciosNivel01_2021 {
         System.out.println("la palabra careta " + ejercicio.esIsograma("careta"));
       
         System.out.println( Arrays.toString( ejercicio.divideFrase("Alta Velocidad Española")));
+        if ( ejercicio.esAnagrama("roma", "amor")){
+            System.out.println("Si que son anagramas");
+        }
+        else {
+            System.out.println("NO son anagramas");
+        }
+       
     }
 
 }

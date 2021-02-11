@@ -185,6 +185,42 @@ public class EjerciciosNivel01_2021Test {
         assertEquals("ACNUR", instance.acronimo("alto comisionado de las naciones  unidas de refugiado"));
     }
 
+    /**
+     * Test of maximo method, of class EjerciciosNivel01_2021.
+     */
+    @Test
+    public void testMaximo() {
+        System.out.println("maximo");
+        int[] lista = null;
+        EjerciciosNivel01_2021 instance = new EjerciciosNivel01_2021();
+        int expResult = 0;
+        int result = instance.maximo(lista);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of esAnagrama method, of class EjerciciosNivel01_2021.
+     */
+    @Test
+    public void testEsAnagrama() {
+        System.out.println("esAnagrama");
+
+        EjerciciosNivel01_2021 instance = new EjerciciosNivel01_2021();
+        assertEquals(true, instance.esAnagrama("amor", "roma"));
+        assertEquals(true, instance.esAnagrama("Claudia", "licuada"));
+        assertEquals(false, instance.esAnagrama("", ""));
+        
+        assertEquals(true, instance.esAnagrama("Helios", "hi…los"));
+        assertEquals(true, instance.esAnagrama("Nacionalista ", "Altisonancia"));
+        assertEquals(false, instance.esAnagrama("kike", "aprobado"));
+        
+
+    }
+
+ 
+
 
 
  
