@@ -243,7 +243,7 @@ public class EjerciciosNivel01_2021 {
      */
     
     public void calendario(int diasIniciales){
-        diasIniciales = diasIniciales % 7;
+        diasIniciales = Math.abs(diasIniciales % 7);
         //contador para saber qué día de la semana estoy imprimiendo
         int contador = 0;
         //primera parte: imprimir las XX iniciales
